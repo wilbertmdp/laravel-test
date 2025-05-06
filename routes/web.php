@@ -36,3 +36,6 @@ Route::get('/profile/{nama?}', function ($nama = ' ') {
     echo "Nama saya $nama";    
 })->where('nama', '[A-Z]+');
 
+Route::get('hubungi', function () {
+    echo "<h2>Hubungi Kami</h2>";
+});
