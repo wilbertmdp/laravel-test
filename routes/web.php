@@ -30,3 +30,9 @@ Route::get('/profil/{nama?}/{pekerjaan?}', function ($nama = ' ', $pekerjaan = '
     echo "<h2>Halo Semua</h2>";
     echo "Nama saya $nama, sebagai $pekerjaan";    
 });
+
+Route::get('/profile/{nama?}', function ($nama = ' ') {
+    echo "<h2>Halo Semua</h2>";
+    echo "Nama saya $nama";    
+})->where('nama', '[A-Z]+');
+
